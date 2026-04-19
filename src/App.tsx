@@ -16,7 +16,7 @@ export default function App() {
     <BrowserRouter basename="/sharehopes-r">
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/sharehopes-r" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="activities" element={<ActivitiesPage />} />
