@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useNavigate, useLocation, Location, NavigateFunction } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
@@ -10,11 +10,10 @@ import { TermsPage } from './pages/TermsPage';
 import { CookiePage } from './pages/CookiePage';
 import { ScrollToTop } from './components/ScrollToTop';
 
-export default function App() {
-
+// Create a separate component for the redirect logic
+function RedirectHandler() {
   const navigate = useNavigate();
-  
-  const location = useLocation(); 
+  const location = useLocation();
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -26,8 +25,13 @@ export default function App() {
     }
   }, [location, navigate]);
 
+  return null;
+}
+
+export default function App() {
   return (
     <BrowserRouter>
+      <RedirectHandler />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -43,7 +47,3 @@ export default function App() {
     </BrowserRouter>
   );
 }
-function useEffect(arg0: () => void, arg1: (NavigateFunction | Location<any>)[]) {
-  throw new Error('Function not implemented.');
-}
-
