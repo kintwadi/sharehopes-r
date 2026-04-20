@@ -8,12 +8,9 @@ const timelineImages = {
   '2025': Array.from({ length: 24 }, (_, i) => 
     `${import.meta.env.BASE_URL}images/p${i + 1}.jpeg`
   ),
-  '2026': [
-    'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=1200',
-    'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200',
-    'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=1200',
-    
-  ]
+  '2026': Array.from({ length: 8 }, (_, i) => 
+    `${import.meta.env.BASE_URL}images/s${i + 2}.png`
+   ),
 };
 
 const years = ['2025', '2026'];

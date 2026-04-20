@@ -1173,7 +1173,7 @@ const resources = {
       },
       hero: {
         badge: 'Conectando Causas. Impulsionando a Mudança',
-        title: 'Plantando sementes de esperanza, juntos.',
+        title: 'Plantando juntos as sementes da esperança.',
         subtitle: 'Semeando amor, colhendo mudanças—oferecemos assistência gratuita aos necessitados.',
         cta: 'Começar a ajudar',
         secondaryCta: 'Saiba mais'

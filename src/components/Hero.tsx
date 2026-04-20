@@ -39,7 +39,7 @@ export function Hero() {
           >
             <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/5]">
               <img
-                src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=1000"
+                src="/images/s4.png"
                 alt="Volunteers working together"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
