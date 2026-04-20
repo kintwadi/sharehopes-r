@@ -12,11 +12,10 @@ import { ScrollToTop } from './components/ScrollToTop';
 
 export default function App() {
   return (
-    // Add the basename here to match your Vite config base
-    <BrowserRouter basename="/sharehopes-r">
+    <BrowserRouter>
       <ScrollToTop />
       <Routes>
-        <Route path="/sharehopes-r" element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="activities" element={<ActivitiesPage />} />
