@@ -6,7 +6,7 @@
  "homepage": "https://sharehopes.org",
   "scripts": {
     "dev": "vite --port=3001 --host=0.0.0.0",
-    "build": "vite build",
+    "build": "vite build  && cp build/index.html build/404.html",
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
