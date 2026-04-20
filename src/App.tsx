@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useNavigate, useLocation, Location, NavigateFunction } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
 import { AboutPage } from './pages/AboutPage';
@@ -11,7 +11,21 @@ import { CookiePage } from './pages/CookiePage';
 import { ScrollToTop } from './components/ScrollToTop';
 
 export default function App() {
+
+  const navigate = useNavigate();
   
+  const location = useLocation(); 
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const redirectPath = params.get('redirect');
+    if (redirectPath) {
+      // Clean up URL and navigate
+      window.history.replaceState(null, '', redirectPath);
+      navigate(redirectPath, { replace: true });
+    }
+  }, [location, navigate]);
+
   return (
     <BrowserRouter>
       <ScrollToTop />
@@ -29,3 +43,7 @@ export default function App() {
     </BrowserRouter>
   );
 }
+function useEffect(arg0: () => void, arg1: (NavigateFunction | Location<any>)[]) {
+  throw new Error('Function not implemented.');
+}
+
